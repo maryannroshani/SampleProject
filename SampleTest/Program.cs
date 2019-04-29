@@ -10,7 +10,7 @@ namespace SampleTest
     {
         static void Main(string[] args)
         {
-            
+            /**
             //1. build a calculator 
 
             Console.WriteLine("Enter Number one");
@@ -162,6 +162,28 @@ namespace SampleTest
                runningTotal +=i;
             }
             Console.WriteLine("Sum is {0}", runningTota);
+            Console.ReadLine(); **/
+
+            Random randomGenerator = new Random();
+            int randomNo = randomGenerator.Next(1, 11);
+            int userNo;
+
+            do {
+                Console.WriteLine("Enter a random no");
+                 userNo = int.Parse(Console.ReadLine());
+                if (userNo > randomNo)
+                {
+                    Console.WriteLine("Too high");
+                }
+                if (userNo < randomNo)
+                {
+                    Console.WriteLine("Too low");
+                }
+
+            }
+            while (randomNo != userNo);
+
+            Console.WriteLine("Random no is correct");
             Console.ReadLine();
         }
     }
